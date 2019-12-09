@@ -1,0 +1,15 @@
+<!--
+  ~ Copyright (c) 2019. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
+  -->
+
+<resources>
+    <string name="app_name">L04.01_SharedPreferences</string>
+    <!-- String used in MainActivity -->
+    <string name="username_hint">Enter your user name</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="volume">Volume</string>
+    <string name="next">Next activity</string>
+    <!-- String used in NextActivity -->
+    <string name="message">See %1$s,\nyou can access SharedPreferences from any Activity!</string>
+    <string name="anonymous">Anonymous User</string>
+</resources>
