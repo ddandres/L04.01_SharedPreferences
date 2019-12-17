@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NextActivity">
+    tools:context="labs.dadm.l0401_sharedpreferences.NextActivity">
 
     <!-- TextView that displays a message with information taken from Sharedpreferences -->
     <TextView

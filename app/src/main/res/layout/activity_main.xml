@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="labs.dadm.l0401_sharedpreferences.MainActivity">
 
     <!-- EditText to introduce the user name: String -->
     <EditText
