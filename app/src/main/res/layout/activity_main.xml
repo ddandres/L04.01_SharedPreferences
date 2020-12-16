@@ -20,7 +20,7 @@
         android:inputType="textPersonName" />
 
     <!-- Switch to select whether to activate Bluetooth or not: Boolean -->
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/swBluetooth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

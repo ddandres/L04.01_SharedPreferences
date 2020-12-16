@@ -10,9 +10,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.SeekBar;
-import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.preference.PreferenceManager;
 
 /*
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences sharedPrefs;
     // Hold references for the Views
     private EditText etUsername;
-    private Switch swBluetooth;
+    private SwitchCompat swBluetooth;
     private SeekBar sbVolume;
 
 

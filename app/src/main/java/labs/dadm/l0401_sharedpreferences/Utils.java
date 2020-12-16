@@ -7,8 +7,8 @@ package labs.dadm.l0401_sharedpreferences;
 class Utils {
 
     // Constant to be used to store and access SharedPreferences
-    static final String USERNAME = "Username";
-    static final String BLUETOOTH = "Bluetooth";
-    static final String VOLUME = "Volume";
+    static final String USERNAME = "labs.dadm.l0401_sharedpreferences.Username";
+    static final String BLUETOOTH = "labs.dadm.l0401_sharedpreferences.Bluetooth";
+    static final String VOLUME = "labs.dadm.l0401_sharedpreferences.Volume";
 
 }
