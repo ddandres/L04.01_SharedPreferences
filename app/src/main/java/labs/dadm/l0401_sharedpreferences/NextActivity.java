@@ -11,9 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
-/*
-    It just displays a message with information retrieved from the default SharedPreferences store
- */
+// It just displays a message with information retrieved from the default SharedPreferences store
 public class NextActivity extends AppCompatActivity {
 
     @Override

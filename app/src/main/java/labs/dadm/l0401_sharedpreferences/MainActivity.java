@@ -7,7 +7,6 @@ package labs.dadm.l0401_sharedpreferences;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.SeekBar;
 
@@ -15,10 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.preference.PreferenceManager;
 
-/*
-    Displays a number of elements whose state is stored
-    and later retrieved using the SharedPreferences mechanism.
- */
+// Displays a number of elements whose state is stored
+// and later retrieved using the SharedPreferences mechanism.
 public class MainActivity extends AppCompatActivity {
 
     // Holds a reference to a SharedPreference object
@@ -27,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText etUsername;
     private SwitchCompat swBluetooth;
     private SeekBar sbVolume;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,18 +37,18 @@ public class MainActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         swBluetooth = findViewById(R.id.swBluetooth);
         sbVolume = findViewById(R.id.sbVolume);
+
+        findViewById(R.id.bNext).setOnClickListener(v -> launchNextActivity());
     }
 
-    /*
-        This method will be executed whenever the activity is going into the background.
-        It will store the current state of its Views.
-     */
+    // This method will be executed whenever the activity is going into the background.
+    // It will store the current state of its Views.
     @Override
     protected void onPause() {
         super.onPause();
 
         // Get an Editor to be able to modify the default SharedPreference store
-        SharedPreferences.Editor editor = sharedPrefs.edit();
+        final SharedPreferences.Editor editor = sharedPrefs.edit();
         final String userName = etUsername.getText().toString();
         if (userName.isEmpty()) {
             // If the user name TextEdit is empty, then remove the element from the store
@@ -68,25 +64,21 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    /*
-        This method will be executed whenever the activity is going to the foreground.
-        It will retrieve the stored state of the Views and update them accordingly.
-     */
+    // This method will be executed whenever the activity is going to the foreground.
+    // It will retrieve the stored state of the Views and update them accordingly.
     @Override
     protected void onResume() {
         super.onResume();
 
         // Update each View with the information stored in the default SharedPreferences store
-        etUsername.setText(sharedPrefs.getString(Utils.USERNAME, ""));
-        swBluetooth.setChecked(sharedPrefs.getBoolean(Utils.BLUETOOTH, false));
-        sbVolume.setProgress(sharedPrefs.getInt(Utils.VOLUME, 0));
+        etUsername.setText(sharedPrefs.getString(Utils.USERNAME, Utils.DEFAULT_USERNAME));
+        swBluetooth.setChecked(sharedPrefs.getBoolean(Utils.BLUETOOTH, Utils.DEFAULT_BLUETOOTH));
+        sbVolume.setProgress(sharedPrefs.getInt(Utils.VOLUME, Utils.DEFAULT_VOLUME));
     }
 
-    /*
-        This method eill be executed whenever the Button is clicked.
-        It will launch the NextActivity.
-     */
-    public void launchNextActivity(View view) {
+    // This method will be executed whenever the Button is clicked.
+    // It will launch the NextActivity.
+    private void launchNextActivity() {
         final Intent intent = new Intent(MainActivity.this, NextActivity.class);
         startActivity(intent);
     }

@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="labs.dadm.l0401_sharedpreferences.NextActivity" />
-        <activity android:name="labs.dadm.l0401_sharedpreferences.MainActivity">
+        <activity
+            android:name="labs.dadm.l0401_sharedpreferences.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

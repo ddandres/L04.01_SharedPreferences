@@ -11,4 +11,7 @@ class Utils {
     static final String BLUETOOTH = "labs.dadm.l0401_sharedpreferences.Bluetooth";
     static final String VOLUME = "labs.dadm.l0401_sharedpreferences.Volume";
 
+    static final String DEFAULT_USERNAME = "";
+    static final boolean DEFAULT_BLUETOOTH = false;
+    static final int DEFAULT_VOLUME = 0;
 }
